@@ -1,3 +1,45 @@
+body {
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+ul img {
+  max-width: 80px;
+}
+li {
+  text-align: center;
+}
+h1,
+h2,
+.date {
+  text-align: center;
+}
 h1 {
-  color: blueviolet;
+  font-size: 40px;
+  margin-top: 20px;
+}
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+.weather-app {
+  border: 1px solid rgb(138, 138, 138);
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.container {
+  margin: 20px auto;
+}
+
+.temp {
+  font-size: 50px;
+}
+.atribute {
+  font-size: 13px;
+  margin-top: 5px;
 }
