@@ -1,8 +1,9 @@
 body {
-  background-image: url("C:/Users/Kasia/Desktop/Nauka/SheCodes/plus/vanilla-weather-app/vanilla-weather/src/background.png");
+  background: url("C:/Users/Kasia/Desktop/Nauka/SheCodes/plus/vanilla-weather-app/vanilla-weather/src/images/background.png");
   width: 100%;
   background-size: cover;
   font-family: "Lora", serif;
+  min-height: 100vh;
 }
 
 ul {
