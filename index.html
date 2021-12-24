@@ -11,10 +11,9 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
@@ -24,25 +23,37 @@
           <div class="row">
             <div class="col-6">
               <ul>
+                <li id="city">Málaga</li>
                 <li>
-                  <img
-                    src="data:image/png;base64,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"
-                    alt="sunny"
-                  /><span class="temp">12</span><small>°C | °F</small>
+                  <img src="src/icone-sun.png" alt="icone-weather" id="icone-weather"/>
                 </li>
-                <li>Humidity: 30%</li>
-                <li>Wind: 3 km/h</li>
+                <li id="description">SUNNY</li>
+                <li id="temperature">
+                  29<span class="units"> °C | °F</small>
+                </li>
               </ul>
             </div>
             <div class="col-6">
-              <h1>Santiago</h1>
-              <div class="date">Friday, 20:15</div>
-              <h2>Sunny</h2>
+              <ul>
+                <li class="date">today, Fri 24/12</li>
+                <li class="time">11:30 am</li>
+                <br />
+                <li class="wind">wind: 3 km/h</li>
+                <li class="humidity">humidity: 50%</li>
+                <br />
+                <li class="max-and-min"><strong>33°C</strong> / 28°C</li>
+              </ul>
+              
             </div>
           </div>
+          <br />
+          <p class="reminder"><img src="src/icone-bell.png" alt="icone-bell">Remember to put a lot of sunscreen!</p>
+       <hr />
         </div>
         <div class="atribute">
-          <a href="https://github.com/kasita623/vanilla-weather">Open-source</a>
+          <a href="https://github.com/kasita623/vanilla-weather" target="_blank"
+            >Open-source code</a
+          >
           by Kasia Jura
         </div>
       </div>
