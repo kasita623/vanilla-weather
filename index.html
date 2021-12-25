@@ -15,6 +15,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
   </head>
   <body>
     <div class="container">
@@ -23,13 +25,13 @@
           <div class="row">
             <div class="col-6">
               <ul>
-                <li id="city">Málaga</li>
+                <li id="city"></li>
                 <li>
                   <img src="src/icone-sun.png" alt="icone-weather" id="icone-weather"/>
                 </li>
-                <li id="description">SUNNY</li>
-                <li id="temperature">
-                  29<span class="units"> °C | °F</small>
+                <li id="description"></li>
+                <li>
+                  <span id="temperature">29</span><span class="units"> °C | °F</small>
                 </li>
               </ul>
             </div>
@@ -38,10 +40,10 @@
                 <li class="date">today, Fri 24/12</li>
                 <li class="time">11:30 am</li>
                 <br />
-                <li class="wind">wind: 3 km/h</li>
-                <li class="humidity">humidity: 50%</li>
+                <li class="wind">wind: <span id="wind"></span> km/h</li>
+                <li class="humidity">humidity: <span id="humidity"></span>%</li>
                 <br />
-                <li class="max-and-min"><strong>33°C</strong> / 28°C</li>
+                <li class="max-and-min"><strong><span id="maxtemp">33</span>°C</strong> / <span id="mintemp">28</span>°C</li>
               </ul>
               
             </div>
