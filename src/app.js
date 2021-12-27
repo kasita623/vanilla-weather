@@ -29,6 +29,7 @@ function formatDate(timestamp) {
 }
 
 function displayWeather(response) {
+  console.log(response.data);
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.name;
   let descriptionElement = document.querySelector("#description");
@@ -47,6 +48,15 @@ function displayWeather(response) {
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   let timeElement = document.querySelector("#time");
   timeElement.innerHTML = formatTime(response.data.dt * 1000);
+  let iconeElement = document.querySelector("#icone-weather");
+  iconeElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconeElement.setAttribute(
+    "alt",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
+  );
 
   let reminder = document.querySelector("#reminder");
   if (response.data.main.temp > 20 && response.data.main.temp < 30) {
@@ -61,7 +71,7 @@ function displayWeather(response) {
 }
 let apiKey = "940cab7f2dffe0039b455473a663a1f7";
 let units = "metric";
-let city = "palma";
+let city = "New york";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
 axios.get(apiUrl).then(displayWeather);
