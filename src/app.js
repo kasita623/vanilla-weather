@@ -33,6 +33,9 @@ function displayWeather(response) {
   cityElement.innerHTML = response.data.name;
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
+
+  celciusValue = response.data.main.temp;
+
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   let windElement = document.querySelector("#wind");
@@ -84,3 +87,27 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+function displayFarenheit(event) {
+  event.preventDefault();
+  celciusElement.classList.remove("active");
+  farenheitElement.classList.add("active");
+  let temperatureElement = document.querySelector("#temperature");
+  let farenheitValue = Math.round(celciusValue * 1.8) + 32;
+  temperatureElement.innerHTML = farenheitValue;
+}
+function displayCelcius(event) {
+  event.preventDefault();
+  farenheitElement.classList.remove("active");
+  celciusElement.classList.add("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celciusValue);
+}
+let farenheitElement = document.querySelector("#farenheit-link");
+farenheitElement.addEventListener("click", displayFarenheit);
+let celciusElement = document.querySelector("#celcius-link");
+celciusElement.addEventListener("click", displayCelcius);
+
+let celciusValue = null;
+
+search("London");

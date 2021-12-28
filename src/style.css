@@ -81,3 +81,13 @@ p img {
   font-size: 13px;
   margin-top: 5px;
 }
+
+.active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.active:hover {
+  color: black;
+}
