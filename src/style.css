@@ -19,6 +19,9 @@ p img {
   height: 50px;
 }
 
+a {
+  text-decoration: none;
+}
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
@@ -90,4 +93,5 @@ p img {
 
 .active:hover {
   color: black;
+  text-decoration: none;
 }
